@@ -7,12 +7,13 @@ h1{
 }
 
 body{
-    background-color:lightcyan;
+    background-color:rgb(255, 255, 255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 a:link {
     text-transform:uppercase;
-    color:palevioletred;
+    color:purple;
 }
 
 a:visited{
@@ -20,6 +21,23 @@ a:visited{
 }
 
 a:hover{
-    font-size:xx-large;
-    color:red;
+    font-size: 30px;
+    color:rgb(201, 108, 108);
+}
+
+h3{
+    font-size: 30px;
+    text-indent: 0px;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+img{
+    height: 200px;
+    width: 350px;
+    align-content: center;
+    padding: 2px;
 }
