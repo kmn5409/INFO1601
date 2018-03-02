@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="../css/mystyles1.css">
+    <link rel="stylesheet" type="text/css" href="../css/w3.css">
+</head>
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="mainpage.html" class="w3-bar-item w3-button">Home</a>
+        <a href="blog.html" class="w3-bar-item w3-button">Blog</a>
+        <a href="contactus.html" class="w3-bar-item w3-button">Contact</a>
+        <a href="aboutUs.html" class="w3-bar-item w3-button">About Us</a>
+        <a href="natural.html" class="w3-bar-item w3-button">Natural Disasters Information</a>
+    </div>
+        
+    <span style="font-size:50px;cursor:pointer;padding-left:5px;" onclick="openNav()" class="button">&#9776;</span>
+    <div id = "main">
+        <h3>Please leave your name and any suggestions here</h3>
+
+        <form>
+            <fieldset>
+                <legend>Comments</legend>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="fullname" value=""><br></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="email" value=""><br></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <select name="selection">
+                                <option value="option1">M</option>
+                                <option value="option2">F</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="comments">Comments:</td>
+                        <td><textarea rows="10" cols="50" name="comment"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="tdratings">How do you rate this site?</td>
+                        <td>
+                            <table class="radiobuttonalign">
+                                <tr>
+                                    <td><input type="radio" name="answer" value="0"></td>
+                                    <td><input type="radio" name="answer" value="1"></td>
+                                    <td><input type="radio" name="answer" value="2"></td>
+                                    <td><input type="radio" name="answer" value="3"></td>
+                                    <td><input type="radio" name="answer" value="4"></td>
+                                    <td><input type="radio" name="answer" value="5"></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td class="postbutton"><button onclick="myFunction()">Post!</button></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="../javascript/myScript.js"></script>
+    <script src="../javascript/Post.js"></script>
+
+</body>
+</html>
