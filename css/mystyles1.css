@@ -1,5 +1,6 @@
 h1{
     text-align:center;
+    color:blue;
 }
 
 .list{
@@ -7,13 +8,12 @@ h1{
 }
 
 body{
-    background-color:rgb(255, 255, 255);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    background-color:lightcyan;
 }
 
 a:link {
     text-transform:uppercase;
-    color:purple;
+    color:palevioletred;
 }
 
 a:visited{
@@ -21,23 +21,6 @@ a:visited{
 }
 
 a:hover{
-    font-size: 30px;
-    color:rgb(201, 108, 108);
-}
-
-h3{
-    font-size: 30px;
-    text-indent: 0px;
-}
-
-h2{
-    font-size: 30px;
-    text-align: center;
-}
-
-img{
-    height: 200px;
-    width: 350px;
-    align-content: center;
-    padding: 2px;
+    font-size:xx-large;
+    color:red;
 }
