@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	<title>New Account</title>
+	<meta charset="UTF-8">
+		<script>		
+		  function createAccount(){
+				var uname = document.getElementById("uname").value;
+				var pwd = document.getElementById("pwd").value;
+				if(localStorage.getItem("user") == document.getElementById("uname").value){
+					alert("Account already exists.");
+				}
+				else{
+						localStorage.setItem("user", uname);
+						localStorage.setItem("pass",pwd);
+						alert("Account created!");
+				}
+			// add code here
+		  }		  	  	  
+	</script>
+   </head>
+   <body>	 
+		 <h2>New Account Page</h2>
+         <fieldset>
+		 <form action="login.html" onsubmit="return createAccount()">
+			Username : <input type="text" id="uname">
+			Password : <input type="password" id="pwd">
+			<button type="submit">Save</button>
+		</form>
+		</fieldset>
+   </body>
+</html>

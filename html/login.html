@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+		<script>
+		  function validate(){
+				// add code here
+				if(localStorage.getItem("user") == document.getElementById("uname").value &&
+				localStorage.getItem("pass") == document.getElementById("pwd").value){
+					localStorage.setItem("user_name", localStorage.getItem("user"));
+					return true;
+				}
+				else if(localStorage.getItem("user") != document.getElementById("uname").value){
+					alert("User Account does not exist!");
+					return false;
+				}
+				else if(localStorage.getItem("user") == document.getElementById("uname").value &&
+				!(localStorage.getItem("pass") == document.getElementById("pwd").value) ){
+					alert("Please check username/password and try again.");
+					return false;
+				}
+		  }		  
+		  	  	  
+		
+	</script>
+   </head>
+   <body>		 
+		 <h2>Log In Page</h2>
+         <fieldset>
+		 <form action="index.html" onsubmit="return validate()">
+			Username : <input type="text" id="uname" /> 
+			Password : <input type="password" id="pwd" />
+			<button type="submit">Login</button>
+			<a href="newaccount.html">Create New Account</a>
+		</form>
+		</fieldset>
+   </body>
+</html>
