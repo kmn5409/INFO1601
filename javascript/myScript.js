@@ -1,3 +1,4 @@
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
@@ -8,4 +9,14 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
     document.body.style.backgroundColor = "white";
+}
+
+function Hello(){
+    var val = localStorage.getItem("user_name");
+    if(val == null){
+        document.getElementById("Hello").innerHTML = "Hello Guest";
+    }
+    else{
+        document.getElementById("Hello").innerHTML = "Hello " + val;
+    }
 }
