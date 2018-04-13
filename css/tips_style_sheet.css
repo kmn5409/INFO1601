@@ -1,0 +1,70 @@
+
+a:link {
+    color: coral;
+}
+
+a:visited{
+    color: coral;
+}
+
+a:hover{
+    font-size: medium;
+    color: coral;
+    opacity: 0.5;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+h1{
+    text-align: left;
+    color: coral;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -3px;
+    padding: 0px;
+    margin-left: 30px;
+}
+
+#heading{
+    margin-top: 50px;
+}
+
+ol{
+    list-style-type: none;
+    font-size: 20px;
+    padding: 5px;
+}
+
+li{
+    display: inline;
+    margin-left: 35px;
+    padding: 8px;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+#Menu{
+    padding: 0px;
+    margin-top: 30px;
+    background-color: rgb(208, 208, 208);   
+    height: 50px;
+    width: auto; 
+    margin-left: 30px;       
+}
+
+h2{
+    margin-left: 30px;
+}
+
+#BInfo{
+    background-color: rgb(208, 208, 208);
+    margin-left: 30px;
+}
+
+#DInfo{
+    background-color: rgb(208, 208, 208);
+    margin-left: 30px;   
+}
+

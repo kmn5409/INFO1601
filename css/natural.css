@@ -1,19 +1,68 @@
 #hurricane{
-    height:400px;
+    width: 400px;
     float:right;
+    margin-left: 20px;
 }
 
 #tsunami{
-    height:400px;
+    width: 400px;
     float:right;
+    margin-left: 20px;
 }
 
 #earthquake{
-    height:400px;
+    width: 400px;
     float:right;
+    margin-left: 20px;
 }
 
 #storm{
-    height:400px;
+    width: 400px;
     float:right;
+    margin-left: 20px;
+}
+
+#heading{
+color: black;
+text-align:center;
+};
+
+.list{
+    list-style-type: none;
+    margin-right: auto;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+a:link {
+    color:blue;
+    text-transform:uppercase;
+}
+
+a:visited{
+    color: blue;
+}
+
+a:hover{
+    font-size: medium;
+    color: blue;
+    opacity: 0.3;
+}
+
+h2{
+    margin-left: 25px;
+}
+
+h3{
+    margin-left: 25px;
+}
+
+#main{
+    border: 1px black solid;
+}
+
+#tip1{
+    border: 1px black solid;
 }
