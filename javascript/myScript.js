@@ -10,16 +10,29 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-function Hello(){
+function Hello2(){
     var val = localStorage.getItem("user_name");
     if(val == null){
         document.getElementById("Hello").innerHTML = "Hello Guest";
-
-}
+        var form = document.getElementById("usrform");
+        var my = document.getElementById("myText");
+        form.style.display = "none";
+        my.style.display = "none";
+    }
     else{
         document.getElementById("Hello").innerHTML = "Hello " + val;
     }
-
+    var num = 1;
+    var val1 = localStorage.getItem("ecomment" + num.toString());
+    while(val1 != null && val!=null){
+        var para = document.createElement("li");
+        var node = document.createTextNode(val1);
+        para.appendChild(node);
+        var element = document.getElementById("comment");
+        element.appendChild(para);
+        num= num+1;
+        val1 = localStorage.getItem("ecomment" + num.toString());
+    }
 }
 
 function inputBar4Comments() {
@@ -94,8 +107,6 @@ function printComments() {
     var textnode = document.createTextNode(fullComment);
     node.appendChild(textnode);
     document.getElementById("commentList").appendChild(node);
-
-
 }
 
 // When the user scrolls down 20px from the top of the document, show the button
