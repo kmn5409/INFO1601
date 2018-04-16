@@ -10,29 +10,23 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
-function Hello2(){
+function Hello(){
     var val = localStorage.getItem("user_name");
     if(val == null){
         document.getElementById("Hello").innerHTML = "Hello Guest";
-        var form = document.getElementById("usrform");
-        var my = document.getElementById("myText");
-        form.style.display = "none";
-        my.style.display = "none";
+        var sub = document.getElementById("sub");
+        if(sub!=null){
+            sub.style.display = "none";
+        }
     }
     else{
         document.getElementById("Hello").innerHTML = "Hello " + val;
+        var form = document.getElementById("form1");
+        if(form!=null){
+            form.style.display = "none";
+        }
     }
-    var num = 1;
-    var val1 = localStorage.getItem("ecomment" + num.toString());
-    while(val1 != null && val!=null){
-        var para = document.createElement("li");
-        var node = document.createTextNode(val1);
-        para.appendChild(node);
-        var element = document.getElementById("comment");
-        element.appendChild(para);
-        num= num+1;
-        val1 = localStorage.getItem("ecomment" + num.toString());
-    }
+
 }
 
 function inputBar4Comments() {
@@ -41,6 +35,22 @@ function inputBar4Comments() {
     y[1].style.visibility = "visible";
     y[2].style.visibility = "visible";
  
+}
+function validate(){
+    if(localStorage.getItem("user") == document.getElementById("Email").value &&
+        localStorage.getItem("pass") == document.getElementById("pass1").value){
+            localStorage.setItem("user_name", localStorage.getItem("user"));
+            return true;
+    }
+    else if(localStorage.getItem("user") != document.getElementById("Email").value){
+        alert("User Account does not exist!");
+        return false;
+    }
+    else if(localStorage.getItem("user") == document.getElementById("Email").value &&
+            !(localStorage.getItem("pass") == document.getElementById("pass1").value) ){
+                alert("Please check username/password and try again.");
+                return false;
+    }
 }
 function sortList() {
     var list, i, switching, b, shouldSwitch;
@@ -76,16 +86,14 @@ function sortList() {
 }
 
 function addToList() {
-    var name = document.getElementsByName("fullname")[0].value;
+    var name = localStorage.getItem("user");
     var comment = document.getElementsByName("comment")[0].value;
-
     var fullComment = name + ":" + comment;
 
     var node = document.createElement("li");
     var textnode = document.createTextNode(fullComment);
     node.appendChild(textnode);
     document.getElementById("commentList").appendChild(node);
-
     var myObj, myJSON;
     //storing data to local storage.
     myObj = { "name": name, "comment": comment };
@@ -93,30 +101,36 @@ function addToList() {
     localStorage.setItem("testJSON", myJSON);
 }
 
+
 function printComments() {
-    document.getElementById("commentList");
-
-    var text, obj;
-    //Retrieving data:
-    text = localStorage.getItem("testJSON");
-    obj = JSON.parse(text);
-
-    var fullComment = obj.name + ": " + obj.comment;
-
-    var node = document.createElement("li");
-    var textnode = document.createTextNode(fullComment);
-    node.appendChild(textnode);
-    document.getElementById("commentList").appendChild(node);
+        document.getElementById("commentList");
+    
+        var text, obj;
+        //Retrieving data:
+        text = localStorage.getItem("testJSON");
+        obj = JSON.parse(text);
+    
+        var fullComment = obj.name + ": " + obj.comment;
+    
+        var node = document.createElement("li");
+        var textnode = document.createTextNode(fullComment);
+        node.appendChild(textnode);
+        document.getElementById("commentList").appendChild(node);
+    
+    
 }
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
+    var btn = document.getElementById("myBtn");
+    if(btn!=null){
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
     }
 }
 
@@ -124,4 +138,23 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+function arrow(){
+    var elem = document.getElementById("arrow");
+    var pos = 50;
+    var id = setInterval(frame, 50);
+    function frame(event) {
+            if (pos == 200) {
+                clearInterval(id);
+            } else {
+                console.log(pos);
+                pos+=10; 
+                elem.style.left = pos + 'px'; 
+            } 
+    }
+    var k = setInterval(function(event){ 
+        arrow();
+        clearInterval(k); 
+    }, 2500);
 }
