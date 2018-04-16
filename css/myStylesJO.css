@@ -32,3 +32,24 @@ li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
+
+#propic {
+    width:150px;
+    
+}
+
+#logDiscus1 {
+    float:right;
+
+}
+.logDiscus2 {
+    float: right;
+    visibility:hidden;
+}
+#submitComment {
+    float: right;
+
+}
+#commentList{
+    margin-left:75px;
+}
