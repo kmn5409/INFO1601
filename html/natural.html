@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,38 +7,42 @@
     <link rel="stylesheet" type="text/css" href="../css/natural.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg" />
 </head>
-<body onload="Hello2()">
+<body onload="Hello();arrow();">
+    <div id="arrow">
+        <img src="images/arrow1.png" id="a1" alt="arrow">
+    </div>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html" class="w3-bar-item w3-button">Home</a>
         <a href="aboutUs.html" class="w3-bar-item w3-button">About Us</a>
         <a href="natural.html" class="w3-bar-item w3-button">Natural Disasters Information</a>
     </div>
-    <div class="login"> <a href="login.html"><button class="button1 button2">Login</button></a>
-        <span id="Hello"></span></div>
+    <form style="display: inline" action="login.html" method="get"><button class="button1 button2">Login</button></form>
+    <span id="Hello"></span>
   
 
     <span style="font-size:50px;cursor:pointer;padding-left:5px;" onclick="openNav()" class="button">&#9776;</span>
-        
+        <div id="main">
         <h1 id="heading">Natural Disasters Information</h1>
         <br><br>
 
         <div class="table">
             <table class="list">
                 <tr>
-                    <td><a href="#hurricane">| Hurricane Tips |</a></td>
-                    <td><a href="#tsunami">| Tsunami Tips |</a></td>
-                    <td><a href="#earthquake">| Earthquakes Tips |</a></td>
-                    <td><a href="#landslide">| LandSlide Tips |</a></td>
+                    <th><a href="#hurricane">| Hurricane Tips |</a></th>
+                    <th><a href="#tsunami">| Tsunami Tips |</a></th>
+                    <th><a href="#earthquake">| Earthquakes Tips |</a></th>
+                    <th><a href="#landslide">| LandSlide Tips |</a></th>
                 </tr>
             </table></div>
 
         <br><br><br>
 
         <div class="hurricanes"> 
-        <h2>Hurricanes: <img id="hurricane" src="images/hurricane_img.jpg"> </h2>
+        <h2>Hurricanes: <img id="hurricane" src="images/hurricane_img.jpg" alt="hurricane"> </h2>
         <h3>A storm with a violent wind, in particular a tropical cyclone in the Caribbean.</h3>
-        <ul>Tips:
+        <h3>Tips:</h3>
+        <ul>
             <li>Keep handy a supply of lumbar, plywood, timber, etc. for battening down purposes.</li>
             <li>Make sure you have a supply of kerosene and coal. Keep coal dry by wrapping in a plastic bag or other waterproof material.</li>
             <li>Store extra food, especially things that can be eaten without cooking or which need very little preparation. 
@@ -54,9 +58,10 @@
 
 
         <div class="tsunami">
-        <h2>Tsunamis: <img id="tsunami" src="images/tsunami_img.jpg"> </h2>
+        <h2>Tsunamis: <img id="tsunami" src="images/tsunami_img.jpg" alt="tsunami"> </h2>
         <h3>A long, high sea wave caused by an earthquake or other disturbance.</h3>
-        <ul>Tips:
+        <h3>Tips:</h3>
+        <ul>
             <li>When in coastal areas, stay alert for tsunami warnings.</li>
             <li>Plan an evacuation route that leads to higher ground.</li>
             <li>Know the warning signs of a tsunami: rapidly rising or falling coastal waters and rumblings of an offshore earthquake.</li>
@@ -69,9 +74,10 @@
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <div class="earthquake">
-            <h2>Earthquakes: <img id="earthquake" src="images/earthquake_img.jpg"> </h2>
+            <h2>Earthquakes: <img id="earthquake" src="images/earthquake_img.jpg" alt="earthquake"> </h2>
             <h3>A sudden violent shaking of the ground, typically causing great destruction, as a result of movements within the earth's crust or volcanic action.</h3>
-            <ul>Tips:
+            <h3>Tips:</h3>
+            <ul>
                 <li>Locate a place in each room of the house that you can go to in case of an earthquake. It should be a spot where nothing is likely to fall on you, like a doorframe.</li>
                 <li>Keep a supply of canned food, an up-to-date first aid kit, 3 gallons (11.4 liters) of water per person, dust masks and goggles, and a working battery-operated radio and flashlights in an accessible place.</li>
                 <li>If you are outdoors, find a clear spot away from buildings, trees, and power lines. Drop to the ground.</li>
@@ -86,9 +92,10 @@
     
     
         <div class="landslide">
-            <h2>LandSlide: <img id="landslide" src="images/landslide.jpg"> </h2>
+            <h2>LandSlide: <img id="landslide" src="images/landslide.jpg" alt="landslide"> </h2>
             <h3>A collapse of a mass of earth or rock from a mountain or cliff.</h3>
-            <ul>Tips:
+            <h3>Tips:</h3>
+            <ul>
                 <li>Do not build near steep slopes, close to mountain edges, near drainage ways, or natural erosion valleys.</li>
                 <li>Watch the patterns of storm-water drainage near your home, and note the places where runoff water converges, increasing flow in channels. These are areas to avoid during a storm.</li>
                 <li>Learn about the emergency-response and evacuation plans for your area. Develop your own emergency plan for your family or business.</li>
@@ -116,11 +123,6 @@
                 <table>
                     <tr>
                         <td></td>
-                        <td align="right"><button onclick="sortList()">Sort (Newest to Oldest)</button></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -129,26 +131,30 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td>
-                            <img id="propic" src="images/propic.png">
-                        </td>
-                        <td><textarea rows="4" cols="150" name="comment" placeholder="Join the Discussion..."></textarea></td>
+                        <th><img id="propic" src="images/propic.png" alt="propic">
+                        <textarea rows="4" cols="150" name="comment" placeholder="Join the Discussion..."></textarea></th>
+                    </tr>
+                    <tr>
+                        <th id="submitComment"><input type="button" onclick="addToList()" value="Submit" id="sub"></th>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+
+        <form onsubmit="return validate()" id="form1">
+            <fieldset id="login">
+                <table>
+                        <tr>
+                                <td></td>
+                                <td id="logDiscus1" onclick="inputBar4Comments()"><input type="text" name="fullname" value="" placeholder="Name"><br></td>
+                            </tr>
+                    <tr>
+                        <td></td>
+                        <td class="logDiscus2"><input type="text" name="email" value="" placeholder="Email" id="Email"><br></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td id="submitComment"><input type="button" onclick="addToList()" value="Submit"></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td id="logDiscus1" onclick="inputBar4Comments()"><input type="text" name="fullname" value="" placeholder="Name"><br></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="logDiscus2"><input type="text" name="email" value="" placeholder="Email"><br></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td class="logDiscus2"><input type="text" name="password" value="" placeholder="Password"><br></td>
+                        <td class="logDiscus2"><input type="text" name="password" value="" placeholder="Password" id="pass1"><br></td>
                     </tr>
                     <tr>
                         <td></td>
@@ -158,7 +164,7 @@
             </fieldset>
         </form>
     </div>
-
+    </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <script src="../javascript/myScript.js"></script>
 
