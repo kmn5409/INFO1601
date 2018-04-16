@@ -66,13 +66,37 @@ function addToList() {
     var name = document.getElementsByName("fullname")[0].value;
     var comment = document.getElementsByName("comment")[0].value;
 
+    var fullComment = name + ":" + comment;
 
     var node = document.createElement("li");
-    var textnode = document.createTextNode(comment);
+    var textnode = document.createTextNode(fullComment);
     node.appendChild(textnode);
     document.getElementById("commentList").appendChild(node);
+
+    var myObj, myJSON;
+    //storing data to local storage.
+    myObj = { "name": name, "comment": comment };
+    myJSON = JSON.stringify(myObj);
+    localStorage.setItem("testJSON", myJSON);
 }
 
+function printComments() {
+    document.getElementById("commentList");
+
+    var text, obj;
+    //Retrieving data:
+    text = localStorage.getItem("testJSON");
+    obj = JSON.parse(text);
+
+    var fullComment = obj.name + ": " + obj.comment;
+
+    var node = document.createElement("li");
+    var textnode = document.createTextNode(fullComment);
+    node.appendChild(textnode);
+    document.getElementById("commentList").appendChild(node);
+
+
+}
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
