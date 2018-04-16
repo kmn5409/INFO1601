@@ -10,6 +10,18 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
+function Hello(){
+    var val = localStorage.getItem("user_name");
+    if(val == null){
+        document.getElementById("Hello").innerHTML = "Hello Guest";
+
+}
+    else{
+        document.getElementById("Hello").innerHTML = "Hello " + val;
+    }
+
+}
+
 function inputBar4Comments() {
     var y = document.getElementsByClassName("logDiscus2");
     y[0].style.visibility = "visible";
@@ -51,14 +63,30 @@ function sortList() {
 }
 
 function addToList() {
-    document.getElementById("comments").submit();
     var name = document.getElementsByName("fullname")[0].value;
     var comment = document.getElementsByName("comment")[0].value;
 
 
-    var node = document.createElement("LI");
+    var node = document.createElement("li");
     var textnode = document.createTextNode(comment);
     node.appendChild(textnode);
     document.getElementById("commentList").appendChild(node);
-  
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
